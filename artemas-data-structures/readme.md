@@ -53,6 +53,12 @@ It is an implementation of an Abstract Data Type.
 
 Based on the index, you can access an element inside an Array.
 
+#### Describe
+
+- A container object that holds a fixed number of values of a single type. 
+- The length of an array is established when the array is created. After creation, 
+its length is fixed.
+
 #### Operations
 
 - Searching (Binary Search)
