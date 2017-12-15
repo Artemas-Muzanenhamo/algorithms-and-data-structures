@@ -37,7 +37,8 @@ we cannot divide by 0.
 
 ## Data Structure
 
-It is an implementation of an Abstract Data Type.
+It is an implementation of an Abstract Data Type. It is a method of organising
+information so that the information can be stored and retrieved efficiently.
 
 - Way of organising data.
 - For efficient use.
