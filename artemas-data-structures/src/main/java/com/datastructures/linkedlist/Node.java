@@ -1,4 +1,13 @@
 package com.datastructures.linkedlist;
 
-public class Node {
+class Node {
+    private Integer nodeValue;
+
+    Integer getNodeValue() {
+        return nodeValue;
+    }
+
+    void setNodeValue(Integer value) {
+        nodeValue = value;
+    }
 }

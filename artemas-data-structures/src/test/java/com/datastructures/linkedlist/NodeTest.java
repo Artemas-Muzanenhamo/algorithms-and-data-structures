@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
 class NodeTest {
 
     private Node node;
@@ -14,8 +16,14 @@ class NodeTest {
     }
 
     @Test
-    @DisplayName("Should return a value from Node")
+    @DisplayName("Should return a set value from a Node")
     void returnValueFromNode() {
-        assertThat(node);
+        node.setNodeValue(7);
+
+        int nodeValue = node.getNodeValue();
+
+        assertThat(nodeValue).isNotNull();
+        assertThat(nodeValue).isEqualTo(7);
+
     }
 }
