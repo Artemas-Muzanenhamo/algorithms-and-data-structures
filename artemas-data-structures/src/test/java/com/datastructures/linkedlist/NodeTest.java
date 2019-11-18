@@ -26,4 +26,12 @@ class NodeTest {
         assertThat(nodeValue).isEqualTo(7);
 
     }
+
+    @Test
+    @DisplayName("Should return null when a Node is not set with any value")
+    void returnNullAsDefaultValueForNodeWithoutAnyValue() {
+        Integer nodeValue = this.node.getNodeValue();
+
+        assertThat(nodeValue).isNull();
+    }
 }
