@@ -10,15 +10,10 @@ class NodeTest {
 
     private Node node;
 
-    @BeforeEach
-    void setup() {
-        node = new Node();
-    }
-
     @Test
     @DisplayName("Should return a set value from a Node")
     void returnValueFromNode() {
-        node.setNodeValue(7);
+        node = new Node(7);
 
         int nodeValue = node.getNodeValue();
 
@@ -30,7 +25,9 @@ class NodeTest {
     @Test
     @DisplayName("Should return null when a Node is not set with any value")
     void returnNullAsDefaultValueForNodeWithoutAnyValue() {
-        Integer nodeValue = this.node.getNodeValue();
+        node = new Node();
+
+        Integer nodeValue = node.getNodeValue();
 
         assertThat(nodeValue).isNull();
     }
