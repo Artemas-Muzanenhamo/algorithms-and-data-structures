@@ -2,6 +2,7 @@ package com.datastructures.linkedlist;
 
 class Node {
     private Integer nodeValue;
+    private Node next;
 
     Node() { }
 
@@ -13,7 +14,11 @@ class Node {
         return nodeValue;
     }
 
-    void setNodeValue(Integer value) {
-        nodeValue = value;
+    Node getNext() {
+        return next;
+    }
+
+    void addChild(Node childNode) {
+        this.next = childNode;
     }
 }
