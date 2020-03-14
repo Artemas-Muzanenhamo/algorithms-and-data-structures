@@ -24,3 +24,20 @@ public void log(int[] numbers) {
 
 * So in _Big O_ notation terms, this method has a single operation which takes 
 _constant time_ and that is represented as `O(1)`.
+* The size of our input doesn't matter but the runtim complexity of the method
+is what matters and in this case, this method will always run in constant time.
+
+### 0(2)
+
+```java
+public void log(int[] numbers) {
+    // O(1)
+    System.out.println(numbers[0]);
+    System.out.println(numbers[0]);
+}
+```
+
+So what if we duplicate the operation?
+
+* The duplicated operation will still be constant time. 
+* The runtime complexity for performing both operations becomes `O(2)`.
