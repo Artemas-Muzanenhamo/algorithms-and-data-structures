@@ -40,4 +40,6 @@ public void log(int[] numbers) {
 So what if we duplicate the operation?
 
 * The duplicated operation will still be constant time. 
-* The runtime complexity for performing both operations becomes `O(2)`.
+* The runtime complexity for performing both operations will be  `O(2)`.
+* However, when we measure the runtime complexity of the operation whether its
+duplicated or not, it'll be _Constant Time_ which will be represented as `O(1)`.
