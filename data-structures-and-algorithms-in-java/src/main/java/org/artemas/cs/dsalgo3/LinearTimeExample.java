@@ -6,5 +6,10 @@ public class LinearTimeExample {
         for (int i = 0; i < numbers.length; i++) {
             System.out.println(numbers[i]);
         }
+
+        // O(n)
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
     }
 }

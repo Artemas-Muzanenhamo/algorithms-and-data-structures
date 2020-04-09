@@ -43,3 +43,21 @@ impact on the complexity of the algorithm.
 dropping the constant thus making the Big O notation of the algorithm above as 
 `O(n)`.
 
+```java
+public class LinearTimeExample {
+    public void log(int[] numbers) {
+        // O(n)
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+
+        // O(n)
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.println(numbers[i]);
+        }
+    }
+}
+```
+
+* We would represent the above as `O(n + n)`.
+* Or simplified as `O(2 + n)`
