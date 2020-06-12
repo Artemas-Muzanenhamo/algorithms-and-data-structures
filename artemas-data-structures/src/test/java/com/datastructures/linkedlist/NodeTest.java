@@ -3,6 +3,8 @@ package com.datastructures.linkedlist;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 class NodeTest {
@@ -38,5 +40,22 @@ class NodeTest {
         firstNode.addChild(secondNode);
 
         assertThat(firstNode.getNext()).isEqualTo(secondNode);
+    }
+
+    @Test
+    @DisplayName("Should print a list of all added notes")
+    void printNodes() {
+        Node firstNode = new Node(7);
+        Node secondNode = new Node(10);
+        Node thirdNode = new Node(15);
+
+        firstNode.addChild(secondNode);
+        secondNode.addChild(thirdNode);
+
+        List<Node> nodes = Node.printNodes(firstNode);
+
+        assertThat(nodes.get(0).getNodeValue()).isEqualTo(7);
+        assertThat(nodes.get(1).getNodeValue()).isEqualTo(10);
+        assertThat(nodes.get(2).getNodeValue()).isEqualTo(15);
     }
 }
