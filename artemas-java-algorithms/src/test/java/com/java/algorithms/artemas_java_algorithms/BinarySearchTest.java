@@ -10,8 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class BinarySearchTest {
 	
-	private int L = 0;
-	private ArrayList<Integer> list;
+	private final static int FIRST_INDEX = 0;
 
 	/**
 	 * This Test will just run the
@@ -23,14 +22,14 @@ class BinarySearchTest {
 
 		//sorted array to be Binary Searched.
 		int[] arr = {1,2,5,10,100,300,400,500,900};
-		int R = arr.length;
-		int x = 500;
+		int lastIndex = arr.length;
+		int valueToSearchFor = 500;
 
 		//initialize the BinarySearch Object to access our method.
 		BinarySearch bs = new BinarySearch();
 
 		//the placeholder to hold the 'int' value index 
-		int binaryPosition = bs.binarySearch(arr, L, R, x);
+		int binaryPosition = bs.binarySearch(arr, FIRST_INDEX, lastIndex, valueToSearchFor);
 
 		//validation
 		assertThat(7).isEqualTo(binaryPosition);
@@ -48,7 +47,7 @@ class BinarySearchTest {
 	@Test
 	void searchListTest(){
 		
-		ArrayList<Integer> randomList = new ArrayList<Integer>();
+		ArrayList<Integer> randomList = new ArrayList<>();
 		//Empty Integer array to store list values from RandomList
 		Integer[] arrayInt = {};
 		Integer[] unsortedArr = {1,6,2,7,44,600,54,70,55,90,100};
@@ -61,17 +60,17 @@ class BinarySearchTest {
 		
 		//convert list to array
 		Integer[] integerArray = randomList.toArray(arrayInt);
-		int[] arr = toPrimitive(integerArray);
+		int[] arrayInput = toPrimitive(integerArray);
 		
 		//int[] arr = toPrimitive(integerArray);
-		int R = arr.length;
-		int x = 100;
+		int lastIndex = arrayInput.length;
+		int valueToSearchFor = 100;
 		
 		//initialize the BinarySearch Object to access our method.
 		BinarySearch bs = new BinarySearch();
 		
 		//the placeholder to hold the 'int' value index 
-		int binaryPosition = bs.binarySearch(arr, L, R, x);
+		int binaryPosition = bs.binarySearch(arrayInput, FIRST_INDEX, lastIndex, valueToSearchFor);
 		
 		//validation
 		assertThat(9).isEqualTo(binaryPosition);
@@ -96,8 +95,7 @@ class BinarySearchTest {
 		
 		//sort List passed in.
 		Collections.sort(list);
-		this.list = list;
-		
+
 		System.out.println("returned Sorted List");
 		System.out.println("List returned as: " + list);
 		
