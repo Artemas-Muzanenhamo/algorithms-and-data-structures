@@ -57,5 +57,8 @@ public class BinarySearch {
 	        return -1;
 	    }
 	}
-	
+
+	public int search(int[] input, int valueToSearchFor) {
+		return 0;
+	}
 }
