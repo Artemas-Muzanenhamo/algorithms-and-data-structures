@@ -46,14 +46,12 @@ class BinarySearchTest {
 	 */
 	@Test
 	void searchListTest(){
-		
-		ArrayList<Integer> randomList = new ArrayList<>();
 		//Empty Integer array to store list values from RandomList
 		Integer[] arrayInt = {};
 		Integer[] unsortedArr = {1,6,2,7,44,600,54,70,55,90,100};
 		
 		//add arrays to the List<Integer>
-		randomList.addAll(Arrays.asList(unsortedArr));
+		ArrayList<Integer> randomList = new ArrayList<>(Arrays.asList(unsortedArr));
 		
 		//get the ArrayList sorted.
 		randomList = sortList(randomList);
@@ -108,7 +106,7 @@ class BinarySearchTest {
 
 		int[] result = new int[IntegerArray.length];
 		for (int i = 0; i < IntegerArray.length; i++) {
-			result[i] = IntegerArray[i].intValue();
+			result[i] = IntegerArray[i];
 		}
 		return result;
 	}
