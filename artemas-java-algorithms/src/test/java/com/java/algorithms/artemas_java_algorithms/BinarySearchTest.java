@@ -1,52 +1,42 @@
 package com.java.algorithms.artemas_java_algorithms;
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
 
-import org.junit.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
-/**
- * 
- * @author amuzanenhamo
- *This test Suite will test a Binary Search on an Array
- *and also will test a Binary Search on an unsorted List 
- *which will be sorted and then have the Binary Search
- *performed afterwards.
- *
- */
-public class BinarySearchTest {
+class BinarySearchTest {
 	
-	int L = 0;
+	private int L = 0;
 	private ArrayList<Integer> list;
-	
+
 	/**
-	 * This Test will just run the 
-	 * binarySearch() method over a 
+	 * This Test will just run the
+	 * binarySearch() method over a
 	 * sorted array.
 	 */
 	@Test
-	public void searchArrayTest(){
-		
+	void searchArrayTest(){
+
 		//sorted array to be Binary Searched.
 		int[] arr = {1,2,5,10,100,300,400,500,900};
 		int R = arr.length;
 		int x = 500;
-		
+
 		//initialize the BinarySearch Object to access our method.
 		BinarySearch bs = new BinarySearch();
-		
+
 		//the placeholder to hold the 'int' value index 
 		int binaryPosition = bs.binarySearch(arr, L, R, x);
-		
+
 		//validation
-		assertEquals(7, binaryPosition);
+		assertThat(7).isEqualTo(binaryPosition);
 		System.out.println("searchArrayTest()");
 		System.out.println("Index of the `x` value (500) is located at index " + binaryPosition);
-		
+
 	}
 	
 	
@@ -56,7 +46,7 @@ public class BinarySearchTest {
 	 * List which will be sorted
 	 */
 	@Test
-	public void searchListTest(){
+	void searchListTest(){
 		
 		ArrayList<Integer> randomList = new ArrayList<Integer>();
 		//Empty Integer array to store list values from RandomList
@@ -84,7 +74,7 @@ public class BinarySearchTest {
 		int binaryPosition = bs.binarySearch(arr, L, R, x);
 		
 		//validation
-		assertEquals(9, binaryPosition);
+		assertThat(9).isEqualTo(binaryPosition);
 		System.out.println("searchListTest()");
 		System.out.println("Index of the `x` value (100) is located at index " + binaryPosition);
 		
@@ -99,7 +89,7 @@ public class BinarySearchTest {
 	 * @param list
 	 * @return - a sorted ArrayList<integer> 
 	 */
-	public ArrayList<Integer> sortList(ArrayList<Integer> list){
+	ArrayList<Integer> sortList(ArrayList<Integer> list){
 		
 		System.out.println("sortList(ArrayList<Integer> list)");
 		System.out.println("Unsorted List passed in: " + list);
@@ -116,7 +106,7 @@ public class BinarySearchTest {
 	}
 	
 	// Convert Integer[] to int[]
-	public static int[] toPrimitive(Integer[] IntegerArray) {
+	static int[] toPrimitive(Integer[] IntegerArray) {
 
 		int[] result = new int[IntegerArray.length];
 		for (int i = 0; i < IntegerArray.length; i++) {
