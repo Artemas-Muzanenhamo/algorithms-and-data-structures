@@ -16,10 +16,32 @@ class BinarySearchTest {
 	}
 
 	@Test
-	@DisplayName("Should return the value searched for")
-	void searchArrayTest(){
-		int[] input = {40, 22, 14, 5, 55, 77, 100};
+	@DisplayName("Should return 0 when the value searched for does not exist")
+	void searchArrayOfNothing() {
+		int[] input = {};
 		int valueToSearchFor = 22;
+
+		int result = binarySearch.search(input, valueToSearchFor);
+
+		assertThat(result).isZero();
+	}
+
+	@Test
+	@DisplayName("Should return the value searched for given its at the first index")
+	void searchArrayAtFirstIndex() {
+		int[] input = {40, 22, 14, 5, 55, 77, 100};
+		int valueToSearchFor = 40;
+
+		int result = binarySearch.search(input, valueToSearchFor);
+
+		assertThat(result).isEqualTo(valueToSearchFor);
+	}
+
+	@Test
+	@DisplayName("Should return the value searched for given its at the last index")
+	void searchArrayAtLastIndex() {
+		int[] input = {40, 22, 14, 5, 55, 77, 100};
+		int valueToSearchFor = 100;
 
 		int result = binarySearch.search(input, valueToSearchFor);
 
