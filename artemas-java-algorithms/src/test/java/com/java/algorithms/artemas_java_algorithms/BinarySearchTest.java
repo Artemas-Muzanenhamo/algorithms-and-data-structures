@@ -32,7 +32,7 @@ class BinarySearchTest {
 		int binaryPosition = bs.binarySearch(arr, FIRST_INDEX, lastIndex, valueToSearchFor);
 
 		//validation
-		assertThat(7).isEqualTo(binaryPosition);
+		assertThat(binaryPosition).isEqualTo(7);
 		System.out.println("searchArrayTest()");
 		System.out.println("Index of the `x` value (500) is located at index " + binaryPosition);
 
@@ -73,7 +73,7 @@ class BinarySearchTest {
 		int binaryPosition = bs.binarySearch(arrayInput, FIRST_INDEX, lastIndex, valueToSearchFor);
 		
 		//validation
-		assertThat(9).isEqualTo(binaryPosition);
+		assertThat(binaryPosition).isEqualTo(9);
 		System.out.println("searchListTest()");
 		System.out.println("Index of the `x` value (100) is located at index " + binaryPosition);
 		
