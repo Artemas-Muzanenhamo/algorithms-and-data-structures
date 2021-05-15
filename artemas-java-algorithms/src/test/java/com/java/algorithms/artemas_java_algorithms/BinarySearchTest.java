@@ -48,4 +48,15 @@ class BinarySearchTest {
 		assertThat(result).isEqualTo(valueToSearchFor);
 	}
 
+	@Test
+	@DisplayName("Should return the value searched")
+	void searchArrayAtMiddle() {
+		int[] input = {40, 22, 14, 5, 55, 77, 100};
+		int valueToSearchFor = 77;
+
+		int result = binarySearch.search(input, valueToSearchFor);
+
+		assertThat(result).isEqualTo(valueToSearchFor);
+	}
+
 }
