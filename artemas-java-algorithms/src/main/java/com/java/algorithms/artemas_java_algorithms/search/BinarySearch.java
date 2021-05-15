@@ -1,4 +1,4 @@
-package com.java.algorithms.artemas_java_algorithms;
+package com.java.algorithms.artemas_java_algorithms.search;
 
 class BinarySearch {
 

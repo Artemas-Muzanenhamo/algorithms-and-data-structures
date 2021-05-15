@@ -1,4 +1,4 @@
-package com.java.algorithms.artemas_java_algorithms;
+package com.java.algorithms.artemas_java_algorithms.search;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
