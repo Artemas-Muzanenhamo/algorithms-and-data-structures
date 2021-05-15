@@ -9,6 +9,6 @@ public class BubbleSort {
             return new int[]{secondNumber, firstNumber};
         }
 
-        return new int[0];
+        return input;
     }
 }
