@@ -3,18 +3,20 @@ package com.java.algorithms.artemas_java_algorithms.sort;
 public class BubbleSort {
     public int[] sort(int[] input) {
 
-
-        int firstNumber = input[0];
-        int secondNumber = input[1];
-
-        if (firstNumber > secondNumber) {
-            return swapPair(firstNumber, secondNumber);
+        for (int i = 0; i < 2; i++) {
+            for (int j = 1; j < 2; j++) {
+                if (input[i] > input[j]) {
+                    swapPair(input, i, j);
+                }
+            }
         }
 
         return input;
     }
 
-    private int[] swapPair(int firstNumber, int secondNumber) {
-        return new int[]{secondNumber, firstNumber};
+    private void swapPair(int[] array, int leftIndex, int rightIndex) {
+        int temp = array[leftIndex];
+        array[leftIndex] = array[rightIndex];
+        array[rightIndex] = temp;
     }
 }
