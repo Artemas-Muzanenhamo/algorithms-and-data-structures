@@ -25,12 +25,22 @@ class BubbleSortTest {
     }
 
     @Test
-    @DisplayName("Should result given two numbers in the array are already sorted")
+    @DisplayName("Should return result given two numbers in the array are already sorted")
     void whenTwoNumbersAreAlreadySorted() {
         int[] input = {7, 8};
 
         int[] result = bubbleSort.sort(input);
 
         assertThat(result).containsExactly(7, 8);
+    }
+
+    @Test
+    @DisplayName("Should return an empty array the input is empty")
+    void whenInputIsEmpty() {
+        int[] input = {};
+
+        int[] result = bubbleSort.sort(input);
+
+        assertThat(result).isEmpty();
     }
 }
