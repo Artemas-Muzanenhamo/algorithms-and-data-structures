@@ -41,6 +41,7 @@ class BubbleSortTest {
     @DisplayName("Should return the list of values sorted")
     void testBubbleSort() {
         List<Integer> listOfNumbers = range(0, 1000);
+//        List<Integer> listOfNumbers = range(0, 100000); <-- TAKES ABOUT 18 SECONDS
         int[] input = stream(listOfNumbers.shuffle().toJavaArray()).mapToInt(number -> (int) number).toArray();
         int[] expected = stream(listOfNumbers.toJavaArray()).mapToInt(number -> (int) number).toArray();
 
