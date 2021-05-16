@@ -43,4 +43,17 @@ class BubbleSortTest {
 
         assertThat(result).isEmpty();
     }
+
+    @Test
+    @DisplayName("Should return the list of values sorted")
+    void testBubbleSort() {
+        int[] input = {2, 10, 33, 1, 43, 44, 1, 5, 55, 4};
+//        int[] input = {3, 2, 1};
+
+        int[] result = bubbleSort.sort(input);
+
+        assertThat(result)
+                .hasSize(10)
+                .containsExactly(1, 1, 2, 4, 5, 10, 33, 43, 44, 55);
+    }
 }
